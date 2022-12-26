@@ -7,10 +7,10 @@ from tensorflow.keras.layers import Conv1D
 def select_model(model, model_name):
     list_model = ["biLSTM_model", "LSTM_model", "GRU_model", "biGRU_model", "noRNN_model"]
     if model_name == list_model[0]: return biLSTM_model(model)
-    if model_name == list_model[2]: return LSTM_model(model)
-    if model_name == list_model[3]: return GRU_model(model)
-    if model_name == list_model[4]: return biGRU_model(model)
-    if model_name == list_model[5]: return noRNN_model(model)
+    if model_name == list_model[1]: return LSTM_model(model)
+    if model_name == list_model[2]: return GRU_model(model)
+    if model_name == list_model[3]: return biGRU_model(model)
+    if model_name == list_model[4]: return noRNN_model(model)
     
 
 def biLSTM_model(model):
