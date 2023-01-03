@@ -184,20 +184,3 @@ score_5 = model_reg_5.evaluate(dataset_x_test, dataset_y_test)
 print('Test Score Model 5')
 print('Test Loss: ', score_5[0])
 print('Test accuracy: ', score_5[1])
-
-
-# dataset_y_pred = model_reg_1.predict(dataset_x_test)
-# dataset_y_pred = dataset_y_pred.reshape((-1,))
-# print("pred:", np.shape(dataset_y_pred))
-# print("test:", np.shape(dataset_y_test))
-# res_1 = {'ytest': dataset_y_test, 'ypred': dataset_y_pred}
-# df_res_1 = pd.DataFrame(res_1)
-# print("Pearson Correlation Coefficient: ", df_res_1.corr('pearson'))
-# print("Spearman Correlation Coefficient: ", df_res_1.corr('spearman'))
-
-#Keras
-# model = Sequential()
-# model.add(Embedding(input_dim=16, output_dim=256, input_length=23))
-# model = select_model(model, "GRU_model")
-# model.compile(loss="mse", optimizer="adam", metrics=["accuracy"])
-# model.fit(x = dataset_x_train, y=dataset_y_train, epochs = EPOCHS, verbose=1, batch_size = BATCH_SIZE, shuffle=True)
