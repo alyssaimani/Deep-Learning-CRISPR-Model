@@ -303,7 +303,7 @@ print('roc_auc model 4: ', K562_roc_auc_4)
 print('roc_auc model 5: ', K562_roc_auc_5)
 
 # label = ["biLSTM model", "LSTM model", "GRU model", "biGRU model", "noRNN model"]
-# ROC_AUC_score = [0.84,0.72,0.73,0.86,0.74]
+# ROC_AUC_score = [roc_auc_1,roc_auc_2,roc_auc_3,roc_auc_4,roc_auc_5]
 
 # ax = plt.axes()
 # ax.set_facecolor("#F8F4EA")
