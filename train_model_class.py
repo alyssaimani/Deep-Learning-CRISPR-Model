@@ -6,7 +6,7 @@ from tensorflow.keras.losses import  binary_crossentropy
 from sklearn.model_selection import train_test_split
 from cnn_model import select_model
 from gensim.models import Word2Vec
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import recall_score, precision_score, f1_score, roc_auc_score
 import matplotlib.pyplot as plt
 
 # function for split positive (label=1) and negative (label=0) dataset
@@ -281,6 +281,70 @@ K562_roc_auc_3 = roc_auc_score(y_test_K562, np.array(K562_y_pred3[:,1]))
 K562_roc_auc_4 = roc_auc_score(y_test_K562, np.array(K562_y_pred4[:,1]))
 K562_roc_auc_5 = roc_auc_score(y_test_K562, np.array(K562_y_pred5[:,1]))
 
+# Recall score 
+recall_1 = recall_score(dataset_y_test, np.array(class_y_pred1[:,1]))
+recall_2 = recall_score(dataset_y_test, np.array(class_y_pred2[:,1]))
+recall_3 = recall_score(dataset_y_test, np.array(class_y_pred3[:,1]))
+recall_4 = recall_score(dataset_y_test, np.array(class_y_pred4[:,1]))
+recall_5 = recall_score(dataset_y_test, np.array(class_y_pred5[:,1]))
+
+# Recall score hek293t
+hek293t_recall_1 = recall_score(y_test_hek293t, np.array(hek293t_y_pred1[:,1]))
+hek293t_recall_2 = recall_score(y_test_hek293t, np.array(hek293t_y_pred2[:,1]))
+hek293t_recall_3 = recall_score(y_test_hek293t, np.array(hek293t_y_pred3[:,1]))
+hek293t_recall_4 = recall_score(y_test_hek293t, np.array(hek293t_y_pred4[:,1]))
+hek293t_recall_5 = recall_score(y_test_hek293t, np.array(hek293t_y_pred5[:,1]))
+
+# Recall score K562
+K562_recall_1 = recall_score(y_test_K562, np.array(K562_y_pred1[:,1]))
+K562_recall_2 = recall_score(y_test_K562, np.array(K562_y_pred2[:,1]))
+K562_recall_3 = recall_score(y_test_K562, np.array(K562_y_pred3[:,1]))
+K562_recall_4 = recall_score(y_test_K562, np.array(K562_y_pred4[:,1]))
+K562_recall_5 = recall_score(y_test_K562, np.array(K562_y_pred5[:,1]))
+
+# Precision score 
+precision_1 = precision_score(dataset_y_test, np.array(class_y_pred1[:,1]))
+precision_2 = precision_score(dataset_y_test, np.array(class_y_pred2[:,1]))
+precision_3 = precision_score(dataset_y_test, np.array(class_y_pred3[:,1]))
+precision_4 = precision_score(dataset_y_test, np.array(class_y_pred4[:,1]))
+precision_5 = precision_score(dataset_y_test, np.array(class_y_pred5[:,1]))
+
+# Precision score hek293t
+hek293t_precision_1 = precision_score(y_test_hek293t, np.array(hek293t_y_pred1[:,1]))
+hek293t_precision_2 = precision_score(y_test_hek293t, np.array(hek293t_y_pred2[:,1]))
+hek293t_precision_3 = precision_score(y_test_hek293t, np.array(hek293t_y_pred3[:,1]))
+hek293t_precision_4 = precision_score(y_test_hek293t, np.array(hek293t_y_pred4[:,1]))
+hek293t_precision_5 = precision_score(y_test_hek293t, np.array(hek293t_y_pred5[:,1]))
+
+# Precision score K562
+K562_precision_1 = precision_score(y_test_K562, np.array(K562_y_pred1[:,1]))
+K562_precision_2 = precision_score(y_test_K562, np.array(K562_y_pred2[:,1]))
+K562_precision_3 = precision_score(y_test_K562, np.array(K562_y_pred3[:,1]))
+K562_precision_4 = precision_score(y_test_K562, np.array(K562_y_pred4[:,1]))
+K562_precision_5 = precision_score(y_test_K562, np.array(K562_y_pred5[:,1]))
+
+# F1 score 
+f1_1 = f1_score(dataset_y_test, np.array(class_y_pred1[:,1]))
+f1_2 = f1_score(dataset_y_test, np.array(class_y_pred2[:,1]))
+f1_3 = f1_score(dataset_y_test, np.array(class_y_pred3[:,1]))
+f1_4 = f1_score(dataset_y_test, np.array(class_y_pred4[:,1]))
+f1_5 = f1_score(dataset_y_test, np.array(class_y_pred5[:,1]))
+
+# F1 score hek293t
+hek293t_f1_1 = f1_score(y_test_hek293t, np.array(hek293t_y_pred1[:,1]))
+hek293t_f1_2 = f1_score(y_test_hek293t, np.array(hek293t_y_pred2[:,1]))
+hek293t_f1_3 = f1_score(y_test_hek293t, np.array(hek293t_y_pred3[:,1]))
+hek293t_f1_4 = f1_score(y_test_hek293t, np.array(hek293t_y_pred4[:,1]))
+hek293t_f1_5 = f1_score(y_test_hek293t, np.array(hek293t_y_pred5[:,1]))
+
+# F1 score K562
+K562_f1_1 = f1_score(y_test_K562, np.array(K562_y_pred1[:,1]))
+K562_f1_2 = f1_score(y_test_K562, np.array(K562_y_pred2[:,1]))
+K562_f1_3 = f1_score(y_test_K562, np.array(K562_y_pred3[:,1]))
+K562_f1_4 = f1_score(y_test_K562, np.array(K562_y_pred4[:,1]))
+K562_f1_5 = f1_score(y_test_K562, np.array(K562_y_pred5[:,1]))
+
+
 #print result roc auc
 print('roc_auc model 1: ', roc_auc_1)
 print('roc_auc model 2: ', roc_auc_2)
@@ -301,6 +365,69 @@ print('roc_auc model 2: ', K562_roc_auc_2)
 print('roc_auc model 3: ', K562_roc_auc_3)
 print('roc_auc model 4: ', K562_roc_auc_4)
 print('roc_auc model 5: ', K562_roc_auc_5)
+
+#print result recall
+print('recall model 1: ', recall_1)
+print('recall model 2: ', recall_2)
+print('recall model 3: ', recall_3)
+print('recall model 4: ', recall_4)
+print('recall model 5: ', recall_5)
+
+print('Dataset hek293t')
+print('recall model 1: ', hek293t_recall_1)
+print('recall model 2: ', hek293t_recall_2)
+print('recall model 3: ', hek293t_recall_3)
+print('recall model 4: ', hek293t_recall_4)
+print('recall model 5: ', hek293t_recall_5)
+
+print('Dataset K562')
+print('recall model 1: ', K562_recall_1)
+print('recall model 2: ', K562_recall_2)
+print('recall model 3: ', K562_recall_3)
+print('recall model 4: ', K562_recall_4)
+print('recall model 5: ', K562_recall_5)
+
+#print result precision
+print('precision model 1: ', precision_1)
+print('precision model 2: ', precision_2)
+print('precision model 3: ', precision_3)
+print('precision model 4: ', precision_4)
+print('precision model 5: ', precision_5)
+
+print('Dataset hek293t')
+print('precision model 1: ', hek293t_precision_1)
+print('precision model 2: ', hek293t_precision_2)
+print('precision model 3: ', hek293t_precision_3)
+print('precision model 4: ', hek293t_precision_4)
+print('precision model 5: ', hek293t_precision_5)
+
+print('Dataset K562')
+print('precision model 1: ', K562_precision_1)
+print('precision model 2: ', K562_precision_2)
+print('precision model 3: ', K562_precision_3)
+print('precision model 4: ', K562_precision_4)
+print('precision model 5: ', K562_precision_5)
+
+#print result f1
+print('f1 model 1: ', f1_1)
+print('f1 model 2: ', f1_2)
+print('f1 model 3: ', f1_3)
+print('f1 model 4: ', f1_4)
+print('f1 model 5: ', f1_5)
+
+print('Dataset hek293t')
+print('f1 model 1: ', hek293t_f1_1)
+print('f1 model 2: ', hek293t_f1_2)
+print('f1 model 3: ', hek293t_f1_3)
+print('f1 model 4: ', hek293t_f1_4)
+print('f1 model 5: ', hek293t_f1_5)
+
+print('Dataset K562')
+print('f1 model 1: ', K562_f1_1)
+print('f1 model 2: ', K562_f1_2)
+print('f1 model 3: ', K562_f1_3)
+print('f1 model 4: ', K562_f1_4)
+print('f1 model 5: ', K562_f1_5)
 
 # label = ["biLSTM model", "LSTM model", "GRU model", "biGRU model", "noRNN model"]
 # ROC_AUC_score = [roc_auc_1,roc_auc_2,roc_auc_3,roc_auc_4,roc_auc_5]
