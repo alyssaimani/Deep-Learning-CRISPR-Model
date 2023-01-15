@@ -6,7 +6,7 @@ from tensorflow.keras.losses import  binary_crossentropy
 from sklearn.model_selection import train_test_split
 from cnn_model import select_model
 from gensim.models import Word2Vec
-from sklearn.metrics import recall_score, precision_score, f1_score, roc_auc_score, confusion_matrix
+from sklearn.metrics import roc_auc_score, average_precision_score
 import matplotlib.pyplot as plt
 
 # function for split positive (label=1) and negative (label=0) dataset
@@ -132,7 +132,7 @@ model3.add(Embedding(
         input_length=23,
         weights=[count_w2v_weight(dataset_x_train)],
         trainable=True))
-model3 = select_model(model3, "GRU_model")
+model3 = select_model(model3, "biGRU_model")
 model3.compile(loss=binary_crossentropy,optimizer='adam', metrics=['acc'])
 model3.fit(x = np.array(dataset_x_train), y=np.array(class_y_train), epochs = EPOCHS, verbose=1, validation_data=(np.array(dataset_x_valid), np.array(class_y_valid)), batch_size = BATCH_SIZE, shuffle=True)
 
@@ -144,7 +144,7 @@ model4.add(Embedding(
         input_length=23,
         weights=[count_w2v_weight(dataset_x_train)],
         trainable=True))
-model4 = select_model(model4, "biGRU_model")
+model4 = select_model(model4, "GRU_model")
 model4.compile(loss=binary_crossentropy,optimizer='adam', metrics=['acc'])
 model4.fit(x = np.array(dataset_x_train), y=np.array(class_y_train), epochs = EPOCHS, verbose=1, validation_data=(np.array(dataset_x_valid), np.array(class_y_valid)), batch_size = BATCH_SIZE, shuffle=True)
 
@@ -281,7 +281,8 @@ K562_roc_auc_3 = roc_auc_score(y_test_K562, np.array(K562_y_pred3[:,1]))
 K562_roc_auc_4 = roc_auc_score(y_test_K562, np.array(K562_y_pred4[:,1]))
 K562_roc_auc_5 = roc_auc_score(y_test_K562, np.array(K562_y_pred5[:,1]))
 
-# #print result roc auc
+# #print result ROC AUC
+print('All Dataset')
 print('roc_auc model 1: ', roc_auc_1)
 print('roc_auc model 2: ', roc_auc_2)
 print('roc_auc model 3: ', roc_auc_3)
@@ -301,3 +302,46 @@ print('roc_auc model 2: ', K562_roc_auc_2)
 print('roc_auc model 3: ', K562_roc_auc_3)
 print('roc_auc model 4: ', K562_roc_auc_4)
 print('roc_auc model 5: ', K562_roc_auc_5)
+
+#PR_AUC score (Average Precision Score)
+pr_auc_1 = average_precision_score(dataset_y_test, np.array(class_y_pred1[:,1]))
+pr_auc_2 = average_precision_score(dataset_y_test, np.array(class_y_pred2[:,1]))
+pr_auc_3 = average_precision_score(dataset_y_test, np.array(class_y_pred3[:,1]))
+pr_auc_4 = average_precision_score(dataset_y_test, np.array(class_y_pred4[:,1]))
+pr_auc_5 = average_precision_score(dataset_y_test, np.array(class_y_pred5[:,1]))
+
+# PR_AUC score hek293t
+hek293t_pr_auc_1 = average_precision_score(y_test_hek293t, np.array(hek293t_y_pred1[:,1]))
+hek293t_pr_auc_2 = average_precision_score(y_test_hek293t, np.array(hek293t_y_pred2[:,1]))
+hek293t_pr_auc_3 = average_precision_score(y_test_hek293t, np.array(hek293t_y_pred3[:,1]))
+hek293t_pr_auc_4 = average_precision_score(y_test_hek293t, np.array(hek293t_y_pred4[:,1]))
+hek293t_pr_auc_5 = average_precision_score(y_test_hek293t, np.array(hek293t_y_pred5[:,1]))
+
+# PR_AUC score K562
+K562_pr_auc_1 = average_precision_score(y_test_K562, np.array(K562_y_pred1[:,1]))
+K562_pr_auc_2 = average_precision_score(y_test_K562, np.array(K562_y_pred2[:,1]))
+K562_pr_auc_3 = average_precision_score(y_test_K562, np.array(K562_y_pred3[:,1]))
+K562_pr_auc_4 = average_precision_score(y_test_K562, np.array(K562_y_pred4[:,1]))
+K562_pr_auc_5 = average_precision_score(y_test_K562, np.array(K562_y_pred5[:,1]))
+
+# #print result PR AUC
+print('All Dataset')
+print('pr_auc model 1: ', pr_auc_1)
+print('pr_auc model 2: ', pr_auc_2)
+print('pr_auc model 3: ', pr_auc_3)
+print('pr_auc model 4: ', pr_auc_4)
+print('pr_auc model 5: ', pr_auc_5)
+
+print('Dataset hek293t')
+print('pr_auc model 1: ', hek293t_pr_auc_1)
+print('pr_auc model 2: ', hek293t_pr_auc_2)
+print('pr_auc model 3: ', hek293t_pr_auc_3)
+print('pr_auc model 4: ', hek293t_pr_auc_4)
+print('pr_auc model 5: ', hek293t_pr_auc_5)
+
+print('Dataset K562')
+print('pr_auc model 1: ', K562_pr_auc_1)
+print('pr_auc model 2: ', K562_pr_auc_2)
+print('pr_auc model 3: ', K562_pr_auc_3)
+print('pr_auc model 4: ', K562_pr_auc_4)
+print('pr_auc model 5: ', K562_pr_auc_5)
