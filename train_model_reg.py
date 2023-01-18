@@ -77,7 +77,7 @@ dataset_y_test = y_test_hek293t + y_test_K562
 # Embedding
 
 # Parameter
-EPOCHS = 1
+EPOCHS = 25
 BATCH_SIZE = 25
 VECTOR_SIZE = 100
 WINDOW = 5

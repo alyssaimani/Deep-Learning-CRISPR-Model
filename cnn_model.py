@@ -1,4 +1,3 @@
-import tensorflow
 from tensorflow import keras
 from tensorflow.keras.layers import Bidirectional, LSTM, BatchNormalization, GRU
 from tensorflow.keras.layers import Dense, Activation, Dropout, Flatten
@@ -48,7 +47,7 @@ def biLSTM_model_reg(model):
     model.add(Activation('relu'))
 
     model.add(Dense(1))
-    model.add(Activation('softmax'))
+    model.add(Activation('sigmoid'))
     return model
 
 def LSTM_model_reg(model):
@@ -81,7 +80,7 @@ def LSTM_model_reg(model):
     model.add(Activation('relu'))
 
     model.add(Dense(1))
-    model.add(Activation('softmax'))
+    model.add(Activation('sigmoid'))
     return model
 
 def biGRU_model_reg(model):
@@ -114,7 +113,7 @@ def biGRU_model_reg(model):
     model.add(Activation('relu'))
 
     model.add(Dense(1))
-    model.add(Activation('softmax'))
+    model.add(Activation('sigmoid'))
     return model
 
 def GRU_model_reg(model):
@@ -147,7 +146,7 @@ def GRU_model_reg(model):
     model.add(Activation('relu'))
 
     model.add(Dense(1))
-    model.add(Activation('softmax'))
+    model.add(Activation('sigmoid'))
     return model
 
 def noRNN_model_reg(model):
@@ -177,7 +176,7 @@ def noRNN_model_reg(model):
     model.add(Activation('relu'))
 
     model.add(Dense(1))
-    model.add(Activation('softmax'))
+    model.add(Activation('sigmoid'))
     return model    
   
     

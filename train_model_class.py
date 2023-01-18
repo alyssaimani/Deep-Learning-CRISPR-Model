@@ -75,7 +75,7 @@ y_test_K562 = test_y_positive_K562 + test_y_negative_K562
 dataset_x_test = x_test_hek293t + x_test_K562
 dataset_y_test = y_test_hek293t + y_test_K562
 
-# One Hot Encoding for Dataset y for Classification scheme
+# One Hot Encoding for Dataset y for Classification schema
 class_y_train = keras.utils.to_categorical(dataset_y_train)
 class_y_test = keras.utils.to_categorical(dataset_y_test)
 class_y_valid = keras.utils.to_categorical(dataset_y_valid)
