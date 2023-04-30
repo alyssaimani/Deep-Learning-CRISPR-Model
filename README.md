@@ -20,7 +20,7 @@ Datasets and reference for CNN model architecture are taken from paper [Deep lea
 and their [GitHub](https://github.com/LQYoLH/CnnCrispr).
 
 # Description
-This project is intended for study of implementing deep learning to a binary classification of sgRNA off-targetprediction. 
+This project is intended for study of implementing deep learning to a binary classification of sgRNA off-target prediction. 
 Five different models were compared in this study to get the best performance in classification prediction for off-target sgRNA. 
 All models implement Word2Vec embedding to get better feature vector representation compared to the traditional one-hot encoding method. 
 The five models were constructed by different RNN models: biLSTM, LSTM, GRU, biGRU and without RNN Layer (NoRNN). 
