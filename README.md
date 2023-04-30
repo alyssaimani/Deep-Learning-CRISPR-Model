@@ -21,7 +21,7 @@ and their [GitHub](https://github.com/LQYoLH/CnnCrispr).
 
 # Description
 This project is intended for study of implementing deep learning to a binary classification of sgRNA off-targetprediction. 
-Five different models were compared in this study to get the best performance in classification predictionfor off-target sgRNA. 
+Five different models were compared in this study to get the best performance in classification prediction for off-target sgRNA. 
 All models implement Word2Vec embedding to get better feature vector representation compared to the traditional one-hot encoding method. 
 The five models were constructed by different RNN models: biLSTM, LSTM, GRU, biGRU and without RNN Layer (NoRNN). 
 Each model was trained with a learning rate default of Adam optimizer 0.001 and tested with two different datasets: HEK293T dataset and K562 Dataset.
