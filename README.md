@@ -1,6 +1,8 @@
 # Deep-Learning-CRISPR-Model (Word2VecCRISPR)
-The details of this project are described in "Deep Learning-based Approach on sgRNA offtarget Prediction in CRISPR/Cas9", presented at the International Conference on Computer Science, Information Technology & Engineering ICCoSITE__
+The details of this project are described in "Deep Learning-based Approach on sgRNA offtarget Prediction in CRISPR/Cas9", presented at the International Conference on Computer Science, Information Technology & Engineering ICCoSITE<br />
 Jakarta - Indonesia, 16 February 2023
+
+This project worked by Alyssa Imani and intented for Seminar coursework at Binus University.
 
 # Background
 Designing the appropriate sgRNA can improve the efficacy of CRISPR/Cas9 to make on-target knockout. 
@@ -25,4 +27,3 @@ All models implement Word2Vec embedding to get better feature vector representat
 The five models were constructed by different RNN models: biLSTM, LSTM, GRU, biGRU and without RNN Layer (NoRNN). 
 Each model was trained with a learning rate default of Adam optimizer 0.001 and tested with two different datasets: HEK293T dataset and K562 Dataset.
 
-This project worked by Alyssa Imani and intented for Seminar coursework at Binus University.
