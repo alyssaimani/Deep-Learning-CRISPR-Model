@@ -10,7 +10,7 @@ improve performance. Like the previous study, the prediction target was divided 
 
 # Resources
 
-Datasets and reference for CNN model architecture are taken from paper [Deep learning improves the ability of sgRNA off-target propensity prediction](https: //bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-020-3395-z) 
+Datasets and reference for CNN model architecture are taken from paper [Deep learning improves the ability of sgRNA off-target propensity prediction](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-020-3395-z) 
 and their [GitHub](https://github.com/LQYoLH/CnnCrispr).
 
 # Description
