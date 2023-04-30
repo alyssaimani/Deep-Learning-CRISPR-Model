@@ -1,5 +1,5 @@
 # Deep-Learning-CRISPR-Model (Word2VecCRISPR)
-The details of this project are described in "Deep Learning-based Approach on sgRNA offtarget Prediction in CRISPR/Cas9", presented at the International Conference on Computer Science, Information Technology & Engineering (ICCoSITE) in Jakarta - Indonesia, 16 February 2023
+The details of this project are described in "Deep Learning-based Approach on sgRNA off-target Prediction in CRISPR/Cas9", presented at the International Conference on Computer Science, Information Technology & Engineering (ICCoSITE) in Jakarta - Indonesia, 16 February 2023
 
 This project worked by Alyssa Imani and intented for Seminar coursework at Binus University.
 
