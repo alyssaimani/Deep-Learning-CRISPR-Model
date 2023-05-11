@@ -1,8 +1,6 @@
 # Deep-Learning-CRISPR-Model (Word2VecCRISPR)
 The details of this project are described in [paper](https://binusianorg-my.sharepoint.com/personal/alyssa_imani_binus_ac_id/_layouts/15/guestaccess.aspx?docid=0fa3a7f195ebf46389d9fbe549cf21e94&authkey=Ae0WPMrh_KNx03mEelJ7T1U&e=TDfJ2j) "Deep Learning-based Approach on sgRNA off-target Prediction in CRISPR/Cas9", presented at the International Conference on Computer Science, Information Technology & Engineering (ICCoSITE) in Jakarta - Indonesia, 16 February 2023
 
-This project worked by Alyssa Imani and intented for Seminar coursework at Binus University.
-
 # Background
 Designing the appropriate sgRNA can improve the efficacy of CRISPR/Cas9 to make on-target knockout. 
 Where on-target knockout means a successful making cleavage for insertion or deletion to target DNA. 
