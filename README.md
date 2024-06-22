@@ -4,8 +4,8 @@ The details of this project are described in [paper](https://ieeexplore.ieee.org
 # Background
 Designing the appropriate sgRNA can improve the efficacy of CRISPR/Cas9 to make on-target knockout. 
 Where on-target knockout means a successful making cleavage for insertion or deletion to target DNA. 
-However, in implementing CIRSPR/Cas9 it is possible to get cleavage on a mismatched target site which is called off-target, 
-which can cause genomic instability or cell death.To solve the challenge of designing sgRNA for CRISPR, 
+However, in implementing CRISPR/Cas9 it is possible to get cleavage on a mismatched target site labelled off-target, 
+which can cause genomic instability or cell death. To solve the challenge of designing sgRNA for CRISPR, 
 this study will explain how the deep learning model can affect the prediction of sgRNA off-target (high specificity). 
 The deep learning model combines Word2Vec embedding and a convolutional neural network (CNN). 
 Different RNN models will also be included in the model to see if they will improve performance. 
